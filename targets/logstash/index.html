@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Henrik Feldt">
+        <link rel="canonical" href="https://logary.github.io/targets/logstash/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+        <title>Logstash</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/prettify-1.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
+        
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Logary</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/">API</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Targets <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../textwriter/">TextWriter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../console/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../debugger/">Debugger</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../file/">File</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Logstash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../graphite/">Graphite</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../elmahio/">ElmahIO</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../logentries/">Logentries</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../loggr/">Loggr</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../riemann/">Riemann</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../db/">DB</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../nimrod/">Nimrod</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../dash/">Dash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../zipkin/">Zipkin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../adapters/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/eventstore/">EventStore</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/suave/">Suave</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/topshelf/">Topshelf</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/log4net/">log4net</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../advanced/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/v2-refactor/">v2.0-refactor</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/reservoirs/">Reservoirs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/writing-a-target/">Writing a Target</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/writing-a-metric/">Writing a Metric</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/thinking-about-time/">Thinking About Time</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/contributing/">Contributing</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../about/">About</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../file/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../graphite/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/logary/logary/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#logstash-logary-target">Logstash - Logary Target</a></li>
+        
+            <li><a href="#api">API</a></li>
+        
+            <li><a href="#logstash-config">Logstash config</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="logstash-logary-target">Logstash - Logary Target</h1>
+<p><strong>For LogLines | builtin</strong></p>
+<p>Logstash is
+a log router that can move your logs to the best location available.</p>
+<blockquote>
+<p><strong>Manage events and logs</strong>. Elasticsearch works seamlessly with Logstash to
+collect, parse, index, and search logs</p>
+</blockquote>
+<pre><code class="powershell">Install-Package Logary
+</code></pre>
+
+<p><img alt="Logstash" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png" /></p>
+<p>This target sends logs to logstash using a TCP socket, meaning there's not that
+much to set up to get started. This means that once in a blue moon you'll
+lose log lines - but often this is not a big issue, because you don't take
+application business logic decisions on log lines.</p>
+<h2 id="api">API</h2>
+<pre><code class="fsharp">open System
+
+open Logary
+open Logary.Configuration
+open Logary.Targets
+
+[&lt;EntryPoint&gt;]
+let main argv =
+  use logary =
+    withLogary' &quot;Riemann.Example&quot; (
+      withTargets [
+        Logstash.create (Logstash.LogstashConf.Create(&quot;logstash.prod.corp.tld&quot;,
+1939us)) &quot;logstash&quot;
+      ] &gt;&gt;
+      withRules [
+        Rule.createForTarget &quot;logstash&quot;
+      ]
+    )
+
+  Console.ReadKey true |&gt; ignore
+  0
+
+</code></pre>
+
+<h2 id="logstash-config">Logstash config</h2>
+<p>Logstash can only take 'json' codec from things that do proper framing, such as
+message brokers.</p>
+<pre><code>input {
+  tcp {
+    codec =&gt; json_lines { charset =&gt; &quot;UTF-8&quot; }
+    host  =&gt; &quot;0.0.0.0&quot;
+    port  =&gt; 1939
+    type  =&gt; &quot;apps&quot;
+  }
+}
+</code></pre></div>
+        </div>
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/prettify-1.0.min.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

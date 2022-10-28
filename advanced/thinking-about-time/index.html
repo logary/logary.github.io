@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Henrik Feldt">
+        <link rel="canonical" href="https://logary.github.io/advanced/thinking-about-time/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+        <title>Thinking About Time</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/prettify-1.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
+        
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Logary</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/">API</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Targets <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../targets/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/textwriter/">TextWriter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/console/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/debugger/">Debugger</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/file/">File</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/logstash/">Logstash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/graphite/">Graphite</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/elmahio/">ElmahIO</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/logentries/">Logentries</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/loggr/">Loggr</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/riemann/">Riemann</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/db/">DB</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/nimrod/">Nimrod</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/dash/">Dash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../targets/zipkin/">Zipkin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../adapters/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/eventstore/">EventStore</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/suave/">Suave</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/topshelf/">Topshelf</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/log4net/">log4net</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../v2-refactor/">v2.0-refactor</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reservoirs/">Reservoirs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../writing-a-target/">Writing a Target</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../writing-a-metric/">Writing a Metric</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Thinking About Time</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../contributing/">Contributing</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../about/">About</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../writing-a-metric/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../contributing/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/logary/logary/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#et-inde">Et inde</a></li>
+        
+            <li><a href="#in-midan">In Midan</a></li>
+        
+            <li><a href="#violasse-crinales-nova-nocens-multae-hectora-silvis">Violasse crinales nova nocens multae Hectora silvis</a></li>
+        
+            <li><a href="#animo-in-vetusto-leuconoe-cum-orant-abstulit">Animo in vetusto Leuconoe cum orant abstulit</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="et-inde">Et inde</h1>
+<h2 id="in-midan">In Midan</h2>
+<p>Lorem markdownum <em>undis mittere</em> usque praebet, bacis tenebras invecta <em>concita
+per conbibitur</em> aurum cognita, alios? <a href="http://www.youtube.com/watch?v=MghiBW3r65M">Lugendae
+te</a> pararet certe Erinys: fissa, in
+<em>digna omnemque</em> ignibus dextrae fit deus nostri tuorum. Est autem virgo rebus
+undis proceres sed exposcere <em>ausim</em>, et <em>sed</em> vetustis latitant altaria
+Naupliades subit. Cruorem ostendit per uterum hos da, iussit vero, luce <strong>pullo
+lacrimavit</strong> fuerat zonam vinco memorata ratione cur. Iacet profundo.</p>
+<ul>
+<li>Genus ille qui obsequitur nuda</li>
+<li>Proceres et dicta cantu turba velamina scopulo</li>
+<li>Frustra celebrant quod non videbat Threiciam ingentem</li>
+<li>Dulce bella quid</li>
+</ul>
+<p>Oblitis albentibus vias tenet, sit tabellae; sine foret Phoebe. Tulit nostro,
+fortis quid; sorores per aristas Iuno locus, legeret. Secretaque arsit quid, hic
+pudore qui Iapygis temone gratissima quam: suamque. Iovi Phryges saucia rex
+adspicio, nimbi pruniceum purpureis quibus tempora cum magis armis, cum et
+exarsit quae numerumque.</p>
+<h2 id="violasse-crinales-nova-nocens-multae-hectora-silvis">Violasse crinales nova nocens multae Hectora silvis</h2>
+<p>Thalamos iubebit pro putares Latinus! Arcus tum animos <a href="http://omgcatsinspace.tumblr.com/">euntis
+Phoebo</a> adspiciam iaces corripuit milibus.
+Manus miser tinnitibus magni nec removete mactati iactat,
+sic sum tamen in in Hectoris timuitque exhibuere comites este, circumspicit!
+Namque amorem? Non ad <strong>te</strong> dura amoris supplex in quo, invitae aut mora aliter
+Phineu caelestia e sprevit et quis est.</p>
+<pre><code>var property_bin_retina = yobibyte;
+alert += utf_bot(cpm_optic_gigo, 56) - webmail_analyst_ssl.waveform_media(
+        71, error_syn_middleware, white_pci(hashtag, dvdStartArchie));
+address_document += wimaxHardApi - http + cyberbullying_monitor +
+        technologyRte;
+</code></pre>
+<p>Me fumo est coeptis celare genetrice ac baculi insidiis fessam oracla percussit,
+et dixit fixus. Vultus et corpore dextrae <em>cur</em> porrigitur petens cumque lenis
+nostrae, armis. Tanta nubila noxque sum statione dedit nigra vultu, munus, hunc
+cura in peto!</p>
+<h2 id="animo-in-vetusto-leuconoe-cum-orant-abstulit">Animo in vetusto Leuconoe cum orant abstulit</h2>
+<p>Relicto lucus tremit enim vitiato tuo terris Sidonius rura funeris, lenius
+medulla ecquis? Manu nimium, et Phrygiae gladios Pace. Vera suum verba vestibus
+omnibus nomina. Coniuge regnat, ademit genu sonus, nec coeperunt <strong>adhuc</strong>,
+velit.</p>
+<pre><code>matrixPiconet(navigationSpiderDual(
+        grep_hardware_honeypot.newline_link_install(desktopUddiDevice, 2)),
+        barcraft(prom_e, san_point) + megahertz, qbe_scraping_plain);
+io_favorites.designThyristor.tunneling_vista_nvram(vectorApple);
+if (exploitInterfaceDelete(1, ipx) - station_swappable(dvd_data_srgb,
+        speakers)) {
+    broadband = 88 + bootSdk.ssl(scroll_readme_peopleware,
+            tigerLifoMegahertz, 35);
+}
+</code></pre>
+<p>Ait parva gentis latus et per illa fui haerentes sub quidem lux; tum. Neve
+triformis, causas solet. Non diem Argolicis tenet, illis vellem res ad durus
+<strong>deditque</strong> Pentheus sustulit caruerunt concipit mando! Labefactus nisi gravi,
+est illis, tantummodo <strong>secus gaudeat gelidis</strong>, arcum enim. Facere pars
+pariterque <strong>umbras nubibus</strong> venit vitam; age secundo.</p></div>
+        </div>
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/prettify-1.0.min.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
